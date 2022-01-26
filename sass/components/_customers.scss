@@ -47,25 +47,7 @@
 
   &:last-child {
     @include mq(mobile-only) {
-      margin-bottom: 0;
       margin-right: 15px;
-    }
-  }
-
-  &:first-child {
-    @include mq(mobile-only) {
-      margin-top: 0;
-    }
-  }
-  &:nth-child(2) {
-    @include mq(mobile-only) {
-      margin-top: 0;
-    }
-  }
-
-  &:nth-child(5) {
-    @include mq(mobile-only) {
-      margin-bottom: 0;
     }
   }
 
