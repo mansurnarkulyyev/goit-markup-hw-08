@@ -1202,6 +1202,12 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .regular-customers-title {
+    margin-bottom: 30px;
+  }
+}
+
 .customers-list-border {
   display: -webkit-box;
   display: -ms-flexbox;

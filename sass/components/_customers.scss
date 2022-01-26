@@ -27,6 +27,12 @@
   }
 }
 
+.regular-customers-title {
+  @include mq(tablet-only) {
+    margin-bottom: 30px;
+  }
+}
+
 .customers-list-border {
   display: flex;
   justify-content: center;
