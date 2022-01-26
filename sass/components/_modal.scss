@@ -1,0 +1,220 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-cont-bg-color);
+  visibility: hidden;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.is-hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  padding: 40px;
+  background: var(--white-color);
+  box-shadow: var(--modal-box-shad);
+  border-radius: 4px;
+
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--modal-btn-border);
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__close-icon {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    &:hover .modal__input {
+      border: 1px solid var(--accent-color);
+    }
+
+    &:hover .modal__textarea {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__input {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 4px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 40px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    outline: transparent;
+
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+
+    &:not(:placeholder-shown) {
+      border: 1px solid var(--accent-color);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea {
+    &:not(:placeholder-shown) {
+      border: 1px solid var(--accent-color);
+    }
+
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    border: transparent;
+    background: #188ce8;
+    box-shadow: 0px 4px 4px var(--modal-btn-box-sha);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @include mq(mobile-only) {
+    max-width: 95%;
+    top: 55%;
+  }
+
+  @include mq(tablet-only) {
+    width: 450px;
+    top: 81%;
+  }
+}
+
+.modal-textarea {
+  margin-bottom: 20px;
+}
+
+.modal__textarea {
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(mobile-only) {
+    height: 120px;
+  }
+}
+
+.agreement {
+  &__input {
+    display: none;
+
+    &:checked + .agreement__checkbox {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--body-color);
+    border-radius: 2px;
+  }
+
+  &__link {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+}
+
+.modal__label:hover .modal__icon,
+.modal__input:focus + .modal__icon,
+.modal__input:not(:placeholder-shown) + .modal__icon {
+  fill: var(--accent-color);
+}
+
+.agreement-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  @include mq(mobile-only) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @include mq(tablet-only) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}

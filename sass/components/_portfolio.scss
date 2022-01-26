@@ -1,0 +1,118 @@
+.border {
+  border-bottom: 1px solid #ececec;
+}
+
+.portfolio-nav-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  @include mq(mobile-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+}
+
+.portfolio-app-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -30px;
+  margin-top: -30px;
+
+  @include mq(tablet-only) {
+    justify-content: start;
+  }
+}
+
+.product {
+  background: var(--white-color);
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  width: 370px;
+  margin-left: 30px;
+  margin-top: 30px;
+
+  @include mq(tablet-only) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+
+  &:hover {
+    box-shadow: var(--portfolio-box-shadow);
+  }
+
+  &__thumb {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: var(--product-bg-color);
+      transform: translateY(100%);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &:hover .product__thumb::before {
+    transform: translateY(0);
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    padding: 63px 24px;
+    opacity: 0;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover .product__actions {
+    opacity: 1;
+  }
+}
+.portfolio {
+  &__list-item {
+    margin: 20px 0px 20px 24px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--body-color);
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--text-color);
+  }
+}
+
+.portfolio-list-list:first-child {
+  margin-left: 0px;
+}

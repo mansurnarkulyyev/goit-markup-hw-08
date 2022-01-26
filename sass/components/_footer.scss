@@ -1,0 +1,249 @@
+.footer {
+  padding: 60px 0px 60px 0px;
+  background-color: var(--bg-color-layout);
+
+  &__logo {
+    margin-bottom: 20px;
+    font-family: Raleway;
+    font-size: 26px;
+    color: var(--accent-color);
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &-address-wrap {
+    @include mq(tablet-only) {
+      text-align: center;
+    }
+  }
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+
+  @include mq(mobile-only) {
+    display: block;
+    text-align: center;
+  }
+
+  @include mq(tablet-only) {
+    flex-wrap: wrap;
+    -ms-flex-align: baseline;
+    justify-content: space-evenly;
+  }
+}
+
+.accent-footer {
+  color: var(--white-color);
+}
+
+.footer-info {
+  &__text {
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+  @include mq(desktop) {
+    width: 231px;
+  }
+}
+
+.footer-address {
+  font-style: normal;
+  line-height: 1.71;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  font-style: normal;
+}
+
+.footer-mail-info,
+.footer-tel-number {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.footer-mail-info:hover,
+.footer-mail-info:focus,
+.footer-tel-number:hover,
+.footer-tel-number:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-title {
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  &__item {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    &:focus.footer-socials-icon,
+    &:hover.footer-socials-icon {
+      fill: var(--white-color);
+    }
+
+    &:focus,
+    &:hover {
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.footer-socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+
+  @include mq(mobile-only) {
+    margin: auto;
+  }
+}
+
+.footer-socials-icon {
+  fill: var(--white-color);
+}
+
+.footer-newsletter,
+.footer-icon-socials {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-left: 70px;
+}
+
+.footer-icon-socials {
+  @include mq(mobile-only) {
+    margin: 60px 0px;
+  }
+
+  @include mq(tablet-only) {
+    text-align: center;
+  }
+}
+
+.footer-newsletter {
+  margin-left: 93px;
+
+  @include mq(mobile-only) {
+    margin-left: 0;
+  }
+
+  @include mq(tablet-only) {
+    margin: auto;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.footer-newsletter-form {
+  display: flex;
+  align-items: center;
+
+  @include mq(mobile-only) {
+    display: block;
+    text-align: center;
+    text-align: -webkit-center;
+  }
+
+  @include mq(tablet-only) {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.footer-input {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  outline: transparent;
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+
+  &:hover {
+    border: 1px solid var(--accent-color);
+  }
+
+  @include mq(mobile-only) {
+    width: 100%;
+  }
+
+  @include mq(tablet-only) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-button {
+  background: var(--accent-color);
+  box-shadow: var(--footer-btn-box-sh);
+  border-radius: 4px;
+  padding: 4px 29px;
+  border: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  margin-left: 12px;
+
+  @include mq(mobile-only) {
+    width: 200px;
+    margin-top: 20px;
+  }
+}
+
+.footer-btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}

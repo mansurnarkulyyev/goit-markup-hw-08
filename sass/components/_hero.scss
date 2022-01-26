@@ -1,0 +1,155 @@
+.hero {
+  @include mq(mobile-only) {
+    height: 400px;
+    padding: 118px 0px 118px 0px;
+  }
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 200px 0px 200px 0px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero-bg_sm.jpeg);
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    -webkit-image-set(url("../images/hero/hero-bg_sm.webp") 1x);
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg_sm@2x.jpeg);
+    background-image: linear-gradient(--white-color);
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      -webkit-image-set(url("../images/hero/hero-bg_sm@2x.webp") 2x);
+    background-image: linear-gradient(--white-color);
+  }
+
+  // background-image: linear-gradient(
+  //     var(--gradient-color),
+  //     var(--gradient-color)
+  //   ),
+  //   url("../images/hero/bg_sm.jpg");
+
+  // background-image: linear-gradient(
+  //     var(--gradient-color),
+  //     var(--gradient-color)
+  //   ),
+  //   -webkit-image-set(url("../images/hero/bg_sm.webp") 1x);
+
+  // @include mq(retina) {
+  //   background-image: linear-gradient(
+  //       var(--gradient-color),
+  //       var(--gradient-color)
+  //     ),
+  //     url("../images/hero/bg_sm@2x.jpg");
+  //   background-image: linear-gradient(
+  //       var(--gradient-color),
+  //       var(--gradient-color)
+  //     ),
+  //     -webkit-image-set(url("../images/hero/bg_sm@2x.webp") 2x);
+  // }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg_md.jpeg);
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      -webkit-image-set(url("../images/hero/hero-bg_md.webp") 1x);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-bg_md@2x.jpeg);
+      background-image: linear-gradient(--white-color);
+
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        -webkit-image-set(url("../images/hero/hero-bg_md@2x.webp") 2x);
+      background-image: linear-gradient(--white-color);
+    }
+  }
+  @include mq(desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg_lg.jpeg);
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      -webkit-image-set(url("../images/hero/hero-bg_lg.webp") 1x);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-bg_lg@2x.jpeg);
+      background-image: linear-gradient(--white-color);
+
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        -webkit-image-set(url("../images/hero/hero-bg_lg@2x.webp") 2x);
+      background-image: linear-gradient(--white-color);
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white-color);
+
+    @include mq(tablet) {
+      width: 360px;
+    }
+
+    @include mq(desktop) {
+      margin: 0 auto;
+      width: 700px;
+      font-weight: 900;
+      font-size: 44px;
+      text-transform: uppercase;
+      line-height: 1.34;
+      text-align: center;
+      letter-spacing: 0.06em;
+      color: var(--white-color);
+    }
+  }
+}

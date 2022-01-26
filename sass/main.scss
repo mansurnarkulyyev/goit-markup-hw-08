@@ -1,0 +1,19 @@
+// common styles
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./components/common";
+
+// section styles
+@import "./components/container";
+@import "./components/button";
+
+@import "./components/header";
+@import "./components/mobile-menu";
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/feature";
+@import "./components/work";
+@import "./components/team";
+@import "./components/customers";
+@import "./components/footer";
+@import "./components/portfolio";
