@@ -946,6 +946,10 @@ img {
   color: #757575;
 }
 
+.work {
+  padding-top: 0;
+}
+
 .work__container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -985,7 +989,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .work {
-    padding-top: 0;
     display: block;
   }
 }

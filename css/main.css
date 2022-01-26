@@ -946,6 +946,10 @@ img {
   color: #757575;
 }
 
+.work {
+  padding-top: 0;
+}
+
 .work__container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1457,8 +1461,6 @@ img {
     text-align: center;
   }
 }
-
-
 
 @media screen and (max-width: 767.98px) {
   .footer-newsletter {

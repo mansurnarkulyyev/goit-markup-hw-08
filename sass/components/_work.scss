@@ -1,4 +1,5 @@
 .work {
+  padding-top: 0;
   &__container {
     flex-direction: column;
   }
@@ -28,7 +29,6 @@
   }
 
   @include mq(desktop) {
-    padding-top: 0;
     display: block;
   }
 }
