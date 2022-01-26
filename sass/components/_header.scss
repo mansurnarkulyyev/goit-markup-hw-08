@@ -51,6 +51,10 @@
     margin-right: 50px;
     color: var(--body-color);
 
+    @include mq(tablet-only) {
+      padding-bottom: 32px;
+    }
+
     &:hover,
     &:focus {
       color: var(--accent-color);
