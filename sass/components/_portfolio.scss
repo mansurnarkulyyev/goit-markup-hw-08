@@ -22,6 +22,10 @@
   margin-left: -30px;
   margin-top: -30px;
 
+  @include mq(mobile-only) {
+    margin-top: -40px;
+  }
+
   @include mq(tablet-only) {
     justify-content: start;
   }
