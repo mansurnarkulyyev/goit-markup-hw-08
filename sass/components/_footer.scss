@@ -158,8 +158,6 @@
 }
 
 .footer-newsletter {
-  margin-left: 93px;
-
   @include mq(mobile-only) {
     margin-left: 0;
   }

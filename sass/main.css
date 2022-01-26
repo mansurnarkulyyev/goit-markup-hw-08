@@ -985,6 +985,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .work {
+    padding-top: 0;
     display: block;
   }
 }
@@ -1457,8 +1458,6 @@ img {
     text-align: center;
   }
 }
-
-
 
 @media screen and (max-width: 767.98px) {
   .footer-newsletter {

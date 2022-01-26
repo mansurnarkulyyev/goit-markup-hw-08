@@ -28,6 +28,7 @@
   }
 
   @include mq(desktop) {
+    padding-top: 0;
     display: block;
   }
 }
