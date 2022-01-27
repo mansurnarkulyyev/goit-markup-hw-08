@@ -19,15 +19,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin: -30px;
 
   @include mq(mobile-only) {
-    margin-top: -40px;
+    margin: -15px;
   }
 
   @include mq(tablet-only) {
     justify-content: start;
+    margin: -15px;
   }
 }
 
@@ -38,6 +38,7 @@
   width: 370px;
   margin-left: 30px;
   margin-top: 30px;
+  margin: 15px;
 
   @include mq(mobile-only) {
     width: 100%;

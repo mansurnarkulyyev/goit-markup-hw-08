@@ -1618,13 +1618,12 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin: -30px;
 }
 
 @media screen and (max-width: 767.98px) {
   .portfolio-app-list {
-    margin-top: -40px;
+    margin: -15px;
   }
 }
 
@@ -1633,6 +1632,7 @@ img {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    margin: -15px;
   }
 }
 
@@ -1644,6 +1644,7 @@ img {
   width: 370px;
   margin-left: 30px;
   margin-top: 30px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 767.98px) {
