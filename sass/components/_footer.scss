@@ -34,7 +34,7 @@
   @include mq(tablet-only) {
     flex-wrap: wrap;
     -ms-flex-align: baseline;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }
 
@@ -153,6 +153,7 @@
   }
 
   @include mq(tablet-only) {
+    margin-left: 165px;
     text-align: center;
   }
 }
